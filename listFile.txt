@@ -1,0 +1,31 @@
+1000  start 1000 
+1000  ldb #length 
+1003  base 1003 
+1003 length resw 1 
+1006 arr resw 2048 
+714a  ldx beta 
+714d  addr t  x
+714f  sts lpha 
+7153  org arr 
+1006  add =w'4' 
+1009 label1 equ arr+10 
+1009  sts alpha,x 
+100c  lda @beta 
+100f  lda arr 
+1012 alpha resw 1 
+1015 delta resw 1 
+1018 beta word 25 
+101b gamma word 4 
+101e aaa end prog 
+this statement can’t have a label
+
+Symbol Table
+arr 1006
+alpha 1012
+length 1003
+delta 1015
+label1 1010
+beta 1018
+gamma 101b
+Literal Table
+4 101e

@@ -1,0 +1,21 @@
+.23456789012345678901234567890123456
+.Label.  Opcode  The  O p e r a n d 
+         START   1000
+         LDB     #LENGTH
+         BASE    1003
+LENGTH   RESW    1
+ARR      RESW    2048
+         LDX     BETA
+         addr    T,X
+        +STS    ALPHA
+         ORG     ARR
+         add     =w'4'
+label1   equ     ARR+10
+         STS     ALPHA,X
+         LDA     @BETA
+         LDA     ARR
+ALPHA    RESW    1
+DELTA    RESW    1
+BETA     WORD    25
+GAMMA    WORD    4
+aaa      END     prog
